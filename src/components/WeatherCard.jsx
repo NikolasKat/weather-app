@@ -1,7 +1,5 @@
 import { BsWind, BsWater } from "react-icons/bs";
 
-import Form from "./Form";
-
 function WeatherCard({ city, windSpeed, icon, humidity, temp }) {
    return (
       <div
