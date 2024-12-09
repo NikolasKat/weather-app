@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { fetchWeather } from "../store/slice";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Form() {
    const [city, setCity] = useState("");

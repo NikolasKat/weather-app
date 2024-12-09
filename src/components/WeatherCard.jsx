@@ -1,35 +1,16 @@
-import { memo } from "react";
 import { BsWind, BsWater } from "react-icons/bs";
-import {
-   BsSunFill,
-   BsCloudFill,
-   BsFillCloudsFill,
-   BsCloudRainFill,
-   BsCloudSnowFill,
-} from "react-icons/bs";
 
 function WeatherCard({ city, windSpeed, icon, humidity, temp }) {
-   const allIcons = [
-      "01n",
-      "02d",
-      "02n",
-      "03d",
-      "03n",
-      "04d",
-      "04n",
-      "09d",
-      "09n",
-      "10d",
-      "10n",
-      "13d",
-      "13n",
-   ];
-
    return (
       <div className="flex flex-col gap-52 items-center text-white text-9xl bg-violet-400 py-9 px-9 rounded-3xl mt-[50px] w-[440px] min-h-[500px]">
          <div className="flex justify-center flex-col items-center">
-            <h2 className="text-7xl font-semibold text-center mt-8 mb-4">
-               {temp}°c
+            <img
+               src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+               alt="current-icon-img"
+               className="w-[150px]"
+            />
+            <h2 className="text-7xl font-semibold text-center mb-4">
+               {temp.toFixed(1)}°c
             </h2>
             <h3 className="text-5xl text-center">{city}</h3>
          </div>
@@ -53,4 +34,4 @@ function WeatherCard({ city, windSpeed, icon, humidity, temp }) {
    );
 }
 
-export default memo(WeatherCard);
+export default WeatherCard;

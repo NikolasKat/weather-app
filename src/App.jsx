@@ -17,12 +17,14 @@ function App() {
                <WeatherCard
                   city={data.name}
                   windSpeed={data.wind.speed}
-                  icon={data.weather.icon}
+                  icon={data.weather[0].icon}
                   humidity={data.main.humidity}
                   temp={data.main.temp}
                />
             ) : (
-               "Nope"
+               <h2 className="text-5xl font-semibold mt-6">
+                  Write down city or country!
+               </h2>
             )}
          </section>
       </>
