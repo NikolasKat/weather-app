@@ -26,12 +26,28 @@ a:hover {
 }
 
 body {
-   margin: 0;
+   background: linear-gradient(135deg, #73a5ff, #5477f5, #7c53f5, #a543f5);
+   background-size: 400% 400%;
+   animation: gradientAnimation 15s ease infinite;
+   font-family: "Arial", sans-serif;
+   color: #333;
    display: flex;
    justify-content: center;
-   background-color: #bbbfff;
-   min-width: 320px;
-   min-height: 100vh;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+}
+
+@keyframes gradientAnimation {
+   0% {
+      background-position: 0% 50%;
+   }
+   50% {
+      background-position: 100% 50%;
+   }
+   100% {
+      background-position: 0% 50%;
+   }
 }
 
 h1 {

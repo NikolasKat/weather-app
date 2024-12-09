@@ -1,8 +1,13 @@
 import { BsWind, BsWater } from "react-icons/bs";
 
+import Form from "./Form";
+
 function WeatherCard({ city, windSpeed, icon, humidity, temp }) {
    return (
-      <div className="flex flex-col gap-52 items-center text-white text-9xl bg-violet-400 py-9 px-9 rounded-3xl mt-[50px] w-[440px] min-h-[500px]">
+      <div
+         id="card"
+         className="flex flex-col gap-52 items-center text-white text-9xl bg-violet-400 py-9 px-9 rounded-3xl mt-[50px] min-w-[440px] min-h-[500px]"
+      >
          <div className="flex justify-center flex-col items-center">
             <img
                src={`https://openweathermap.org/img/wn/${icon}@2x.png`}

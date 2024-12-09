@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchWeather } from "../store/slice";
 import { useEffect, useState } from "react";
 
+import { BsSearch } from "react-icons/bs";
+
 export default function Form() {
    const [city, setCity] = useState("");
    const data = useSelector((state) => state.weather.weatherData);
@@ -9,7 +11,7 @@ export default function Form() {
    const dispatch = useDispatch();
 
    return (
-      <div className="flex justify-center gap-8 mt-[50px]">
+      <div className="flex justify-center gap-8 mt-8">
          <input
             className="p-3 rounded-3xl text-3xl font-semibold"
             type="text"
@@ -21,9 +23,9 @@ export default function Form() {
             onClick={async () => {
                await dispatch(fetchWeather(city));
             }}
-            className="py-3 px-6 rounded-3xl text-3xl font-semibold w-42"
+            className="p-4 rounded-3xl text-3xl font-semibold text-black"
          >
-            Search
+            <BsSearch />
          </button>
       </div>
    );
