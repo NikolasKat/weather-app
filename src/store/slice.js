@@ -1,5 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
+const API_KEY = null; // MY API_KEY
+
 export const fetchWeather = createAsyncThunk(
    "weather/fetchWeather",
    async function (cityName, { rejectWithValue }) {
